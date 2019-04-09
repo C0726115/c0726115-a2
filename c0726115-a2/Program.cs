@@ -1,11 +1,20 @@
-﻿namespace DelegatesAndEvents
+﻿using System;
+
+namespace DelegatesAndEvents
 {
-    class Program
+    public class DelegateExercises
     {
-        static void Main(string[] args)
+        public delegate void MyDelegate();
+        void Method1(int i)
         {
-            DelegateExercises delegateExercises = new DelegateExercises();
-            delegateExercises.Method2();
+            Console.WriteLine("Method1");
+            Console.ReadLine();
         }
+        public void Method2()
+        {
+            MyDelegate myDelegate = new MyDelegate(Method1);
+            myDelegate();
+        }
+
     }
 }
