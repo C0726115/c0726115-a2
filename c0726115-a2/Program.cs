@@ -1,72 +1,20 @@
-﻿
-using System;
-using System.Text;
+﻿using System;
 
-
-
-using System.Threading.Tasks;
-namespace delegateAndEvents
-
-
-
+namespace DelegatesAndEvents
 {
-
-
-
-    class Program
-
-
-
+    public class DelegateExercises
     {
+        public delegate void MyDelegate();
+        void Method1()
+        {
+            Console.WriteLine("Method1");
+            Console.ReadLine();
+        }
+        public void Method2()
+        {
+            MyDelegate myDelegate = new MyDelegate(Method1);
+            myDelegate (50);
+        }
 
-
-
-
-
-
-
-
-
-
-
-            //Name 1 - Inderjeet Singh
-
-
-
-            //ID - c0731909
-
-
-
-
-
-@@ -33,4 +31,14 @@ public void Method2();
-
-
-
-            }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
