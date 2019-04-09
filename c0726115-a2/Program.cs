@@ -1,74 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//Student name - Robin Bhatia   Student id - C0726115
-namespace Assignment2
+﻿using System.Reflection;
 
-{
+using System.Runtime.CompilerServices;
 
-    public class Program
-
-    {
-
-        public static void Main()
-
-        {
-
-            DelegateExercises delegateExercises = new DelegateExercises();
-
-            delegateExercises.Method3();
-
-            Console.ReadLine();
+using System.Runtime.InteropServices;
 
 
 
-        }
+// General Information about an assembly is controlled through the following
 
-    }
+// set of attributes. Change these attribute values to modify the information
 
+// associated with an assembly.
 
+[assembly: AssemblyTitle("Assignment -726115")]
 
-    public delegate void MyDelegate(ref int intValue);
+[assembly: AssemblyDescription("")]
 
+[assembly: AssemblyConfiguration("")]
 
+[assembly: AssemblyCompany("")]
 
-    public class DelegateExercises
+[assembly: AssemblyProduct("Assignment -726115")]
 
-    {
+[assembly: AssemblyCopyright("Copyright ©  2019")]
 
-        void Method1(ref int intValue)
+[assembly: AssemblyTrademark("")]
 
-        {
-
-            intValue = intValue + 5;
-
-            System.Console.WriteLine("Method1 " + intValue);
-
-        }
+[assembly: AssemblyCulture("")]
 
 
 
-        public void Method3()
+// Setting ComVisible to false makes the types in this assembly not visible
 
-        {
+// to COM components.  If you need to access a type in this assembly from
 
-            MyDelegate myDelegate = new MyDelegate(Method1);
+// COM, set the ComVisible attribute to true on that type.
 
-            MyDelegate myDelegate1 = new MyDelegate(Method1);
-
-            MyDelegate myDelegate2 = myDelegate + myDelegate1;
-
-            int intParameter = 5;
-
-            myDelegate2(ref intParameter);
-
-        }
-
-    }
+[assembly: ComVisible(false)]
 
 
 
-}
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+
+[assembly: Guid("a501a329-8c3f-4e5d-af9d-6c5535773c3c")]
+
+
+
+// Version information for an assembly consists of the following four values:
+
+//
+
+//      Major Version
+
+//      Minor Version
+
+//      Build Number
+
+//      Revision
+
+//
+
+// You can specify all the values or you can default the Build and Revision Numbers
+
+// by using the '*' as shown below:
+
+// [assembly: AssemblyVersion("1.0.*")]
+
+[assembly: AssemblyVersion("1.0.0.0")]
+
+[assembly: AssemblyFileVersion("1.0.0.0")]
 
