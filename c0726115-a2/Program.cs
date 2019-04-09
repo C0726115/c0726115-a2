@@ -1,22 +1,89 @@
-﻿using System;
+﻿
+using System;
+using System.Text;
 
-namespace Assignment02
+
+
+using System.Threading.Tasks;
+
+
+
+
+
+
+
+
+
+
+
+namespace delegateAndEvents
+
+
+
 {
-    public class C0726115
+
+
+
+    class Program
+
+
+
     {
-          static void Main(string[] args)
-          {
-            //Name 1 - Robin Bhatia
-            //ID - c0726115
-          }
-    public class DelegateExcercises
+
+
+
+        static void Main(string[] args)
+
 
 
         {
 
 
 
-public delegate void MyDelegate();
+
+
+
+
+            //Name 1 - Robin Bhatia
+
+
+
+            //ID - c0726115
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        public class DelegateExcercises
+
+
+
+        {
+
+
+
+            public delegate void MyDelegate();
 
 
 
@@ -32,16 +99,35 @@ public delegate void MyDelegate();
 
 
 
+                Console.WriteLine("Method 1");
+
+
+
+                Console.ReadLine();
+
+
+
             }
 
 
 
+            public void Method2()
+
+
+
+            {
+
+
+
+                MyDelegate myDelegate = new MyDelegate(Method1);
+
+
+
+                myDelegate();
+
+
+
+            }
         }
-
-
-
     }
-
-
-
 }
